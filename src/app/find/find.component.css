@@ -1,0 +1,18 @@
+::ng-deep .mat-toolbar {
+    min-height: 52px;
+}
+
+::ng-deep .mat-toolbar-row{
+    height: 52px;
+}
+
+.example-container {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    align-items: center;
+}
+  
+.example-container > * {
+width: 30%;
+}
