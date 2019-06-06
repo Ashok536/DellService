@@ -3,19 +3,23 @@ import { NgModule } from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
-import{ FormsModule } from '@angular/forms';
+import{ FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { MaterialModule } from './material/material.module';
 import { FindComponent } from './find/find.component';
+import { GridComponent } from './grid/grid.component';
+import { TrackComponent } from './track/track.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    FindComponent
+    FindComponent,
+    GridComponent,
+    TrackComponent
   ],
   imports: [
     BrowserModule,
@@ -27,8 +31,12 @@ import { FindComponent } from './find/find.component';
     ]),
     FormsModule,
     MaterialModule,
+    ReactiveFormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents:[
+    TrackComponent
+  ]
 })
 export class AppModule { }
